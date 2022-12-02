@@ -68,7 +68,7 @@ function App() {
               rows="4"
               cols="50"
               maxLength={configs.limitCaract}
-              placeholder="Adicione o seu texto ou URL aqui, com um limite de 1.000 caracteres."
+              placeholder="Adicione o seu texto aqui, com um limite de 1.000 caracteres."
               onChange={(e) => setTempInput([e.target.value])}
               value={tempInput}
             ></textarea>
