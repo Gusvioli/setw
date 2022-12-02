@@ -20,7 +20,7 @@ function App() {
     try {
       if (!tempInput) return setErrors({
           status: true,
-          msg: 'Por favor, adicione o texto que deseja processar.',
+          msg: 'Por favor, adicione o texto que deseja processar.[Clear x]',
       });
 
       const dataFinal = Processador(tempInput);
