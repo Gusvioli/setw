@@ -1,38 +1,285 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.errors {
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+  height: 50px;
+  background-color: #743e3e;
+  color: #f1f1f1;
+  animation-name: errors;
+  animation-duration: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes errors {
+  from {    
+    height: 0px;
+  }
+  to {    
+    height: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #D9DCE9;
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: auto;
+  gap: 30px;
 }
 
-@keyframes App-logo-spin {
+button, input {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+  color: #4A4A66;
+}
+
+a:link {
+  color: #4A4A66;
+ }
+
+ a:active {
+  color: #4A4A66;
+ }
+
+ a:visited {
+  color: #4A4A66;
+ }
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  margin-inline-start: 80px;
+}
+
+main {
+  width: 913px;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 7px;
+  margin-top: 128px;
+  margin-bottom: 32px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  transition-timing-function: ease-in-out;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+footer {
+  padding: 20px;
+  /* border: 1px solid #3b3b5c; */
+  font-family: 'Poppins';
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .namePage {
+  width: 119px;
+  height: 50px;
+
+  font-family: 'Gugi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 52px;
+  color: #4A4A66;
+  mix-blend-mode: darken;
+}
+
+.urlInputPage {
+  width: auto;
+  height: 40px;
+  background: #FFFDFD;
+  border-radius: 7px;
+}
+
+.infoPage {
+  width: 82px;
+  height: 50px;  
+  font-family: 'Gugi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 52px;  
+  color: #4A4A66;
+}
+
+.urlButtonFormPage {
+  width: 78px;
+  height: 40px;  
+  background: #4A4A66;
+  border-radius: 7px;
+  outline: 0;
+  margin: 2px;
+}
+
+.urlButtonFormPage:hover {
+  width: 78px;
+  height: 40px;  
+  background: #3b3b5c;
+  border-radius: 7px;
+  outline: 0;
+}
+
+.inputUrlFormPage {
+  min-width: 556px;
+  min-height: 120px;
+  max-width: 556px;
+  max-height: 120px;
+  padding: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  border-radius: 7px;
+  color: rgba(0, 0, 0);
+}
+
+.inputUrlFormPage::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.urlTextFormPage {
+  width: 55px;
+  height: 30px;
+  font-family: 'Gugi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 45px;
+  color: #DAE5EB;
+}
+
+.outrosMainDivPage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: 5px;
+}
+
+.outrosPage {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  padding: 3px;
+  width: 100%;
+}
+
+.textoOutrosMainDivPage {
+  font-family: 'Poppins';
+}
+
+.textoOutrosMainDivPage > span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.progressBarOutrosMainDivPage {
+  background: #4A4A66;
+  border-radius: 7px;
+  height: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation-name: progressBarOutrosMainDivPage;
+  animation-duration: 2s;
+}
+
+@keyframes progressBarOutrosMainDivPage {
   from {
-    transform: rotate(0deg);
+    background: #4A4A66;
+    border-radius: 7px;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1%;
   }
   to {
-    transform: rotate(360deg);
+    background: #4A4A66;
+    border-radius: 7px;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
+}
+
+.progressBarOutrosMainDivPage > div > span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4A4A66;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4A4A66;
 }
